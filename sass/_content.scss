@@ -1,0 +1,26 @@
+.content {
+	background-color: $white;
+	// padding: 40px;
+}
+
+.content > section {
+	padding: 30px 40px;
+}
+
+.tiles {
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+	// padding: 20px;
+	
+	//the following is desktop mode:...
+	@include wider-than(600px) {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		// transform: translateX(0);	
+		// left: 0;
+		// top: 0;
+	}
+
+}

@@ -1,0 +1,26 @@
+{
+  "name": "rockit-express",
+  "description": "",
+  "main": "server.js",
+  "authors": [
+    "Kevin Lanni <therealklanni@gmail.com> (https://github.com/therealklanni)"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/adamgonzls/fan-bulb",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./public/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "backbone": "~1.2.3",
+    "lodash": "~3.10.1",
+    "handlebars": "~4.0.5",
+    "normalize-css": "normalize.css#~3.0.3"
+  }
+}

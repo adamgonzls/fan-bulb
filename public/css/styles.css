@@ -1,0 +1,135 @@
+/****************************************
+  Inherited Syles
+*****************************************/
+/*
+See this explanation for details
+https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+*/
+html {
+  box-sizing: border-box;
+  color: #444;
+  font: 12pt 'Open Sans', Arial;
+  font-weight: 300; }
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  color: inherit;
+  font: inherit; }
+
+/****************************************
+  Defaults
+*****************************************/
+body {
+  background-color: #dedede; }
+
+h2 {
+  margin: 0; }
+
+/****************************************
+  Helpers
+*****************************************/
+/****************************************
+  Layout
+*****************************************/
+@media screen and (min-width: 1000px) {
+  .page > div {
+    width: 960px;
+    margin: 0 auto; } }
+
+.primary-nav {
+  padding: 10px;
+  background-color: #fff;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #d9d9d9; }
+
+.primary-nav > a {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0 20px;
+  margin: 10px; }
+
+.user-selections {
+  height: 50px;
+  background-color: #e8e8e8; }
+
+.showcase {
+  height: 400px;
+  background: url(../images/hugger1000x500.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 30%;
+  position: relative; }
+
+.banner {
+  position: absolute;
+  height: 40%;
+  background-color: rgba(250, 250, 250, 0.7);
+  border: 1px solid black;
+  bottom: 15%;
+  left: 0;
+  right: 0; }
+
+.content {
+  background-color: #fff; }
+
+.content > section {
+  padding: 30px 40px; }
+
+.tiles {
+  display: flex;
+  flex-direction: column;
+  margin: auto; }
+  @media screen and (min-width: 600px) {
+    .tiles {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row; } }
+
+/****************************************
+  Components
+*****************************************/
+.tile {
+  height: 300px;
+  margin: 5px;
+  border: 1px solid #d9d9d9;
+  position: relative;
+  box-shadow: 0 2px 2px #d9d9d9; }
+  @media screen and (min-width: 600px) {
+    .tile {
+      width: calc(33.33% - 10px); } }
+
+.tile-image {
+  height: 100%;
+  padding-top: 10px;
+  background: url(../images/hugger1000x500.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 10%; }
+
+.tile-details {
+  height: 40%;
+  width: 100%;
+  position: absolute;
+  background-color: #eee;
+  border-top: 1px solid #d9d9d9;
+  bottom: 0;
+  padding: 10px; }
+
+.tile-details1 {
+  color: #999; }
+
+.control {
+  position: absolute;
+  bottom: 10%;
+  right: 5%; }
+
+.control > button {
+  font-size: .8em;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border: 1px solid #d9d9d9;
+  border-radius: 15px;
+  background-color: #84c12d; }

@@ -1,0 +1,92 @@
+/****************************************
+  Inherited Syles
+*****************************************/
+
+/*
+See this explanation for details
+https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+*/
+
+html {
+    box-sizing: border-box;
+    color: #444;
+    font: 12pt 'Open Sans', Arial;
+    font-weight: 300;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    color: inherit;
+    font: inherit;
+}
+
+/****************************************
+  Defaults
+*****************************************/
+
+body {
+	background-color: $off-white;
+}
+
+h2 {
+	margin: 0;
+}
+
+/****************************************
+  Helpers
+*****************************************/
+
+
+/****************************************
+  Layout
+*****************************************/
+
+.page > div {
+
+
+	@include wider-than(1000px) {
+		width: 960px;
+		margin: 0 auto;
+	}
+}
+
+.primary-nav {
+	// position: absolute;
+	padding: 10px;
+	background-color: $white;
+	right: 0;
+	width: 100%;
+	text-align: center;
+	border-bottom: 1px solid $med-grey;
+}
+
+.primary-nav > a {
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 0 20px;
+	margin: 10px
+}
+
+.user-selections {
+	height: 50px;
+	background-color: $dark-grey;
+}
+
+.showcase {
+	height: 400px;
+	background: url(../images/hugger1000x500.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 30%;
+	position: relative;
+}
+
+.banner {
+	position: absolute;
+	height: 40%;
+	background-color: rgba(250,250,250,.7);
+	border: 1px solid black;
+	bottom: 15%;
+	left: 0;
+	right: 0;
+}
