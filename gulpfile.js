@@ -1,8 +1,12 @@
 'use strict';
  
 var gulp = require('gulp');
+var gutil = require('gulp-util');
+var source = require('vinyl-source-stream');
 var sass = require('gulp-sass');
 var browserify = require('browserify');
+var rimraf = require('rimraf');
+var hbsfy = require('hbsfy');
 
 /****************************************
   JS
@@ -13,6 +17,7 @@ var bundler = browserify({
   debug: true
 });
 
+bundler.transform(hbsfy);
 bundler.on('log', gutil.log); // output build logs to terminal
 
 gulp.task('clean', function (cb) {
@@ -23,7 +28,7 @@ gulp.task('build', ['clean'], function () {
   return bundler.bundle()
     .on('error', gutil.log.bind(gutil, 'Browserify Error'))
     .pipe(source('bundle.js'))
-    .pipe(gulp.dest('build'));
+    .pipe(gulp.dest('./public/scripts'));
 });
 
 /****************************************
@@ -36,8 +41,9 @@ gulp.task('sass', function () {
     .pipe(gulp.dest('./public/css'));
 });
  
-gulp.task('sass:watch', function () {
+gulp.task('watch', function () {
   gulp.watch('./sass/**/*.scss', ['sass']);
+  gulp.watch(['src/**/*.js', 'src/**/*.hbs'], ['build'])
 });
 
-gulp.task('default', ['sass', 'sass:watch'])
+gulp.task('default', ['sass', 'build', 'watch'])
