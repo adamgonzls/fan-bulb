@@ -1,14 +1,16 @@
-hi from hbs
-{{!-- {{#each this}}
+{{#each this}}
 	<div data-id="{{product_id}}" class="tile">
-		<div class="tile-image">{{product_image}}</div>
+		<div class="tile-image" 
+			{{!-- /uploaded_files/{{file_id}}.jpg --}}
+			style="background-image: url(/images/{{file_path}}.jpg);"> {{!-- another table --}}
+		</div>
 		<div class="tile-details">
-			<div class="tile-details1">{{brand}}</div>
+			<div class="tile-details1">{{brand_name}}</div> {{!-- another table --}}
 			<div class="tile-details2">{{model}}</div>
 			<div class="control">
 				<button>Info</button>
-				<button>Compare</button>
+				<button>Choose</button>
 			</div>
 		</div>
 	</div>
-{{/each}} --}}
+{{/each}}

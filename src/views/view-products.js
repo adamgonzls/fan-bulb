@@ -13,7 +13,7 @@ var App = require('../app');
 *****************************************/
 
 var ShowProducts = Backbone.View.extend({
-	el: $('.tiles'),
+	el: '.tiles',
 
 	collection: App.Collections.product,
 

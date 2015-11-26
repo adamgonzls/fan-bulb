@@ -26,24 +26,21 @@ App.Router = Backbone.Router.extend({
 	// Route handlers
 	index: function () {
 		showProducts.render();
-		// console.log(showProducts)
-
-		// var result = productTileTmpl([{
-		// 	product_id: 1,
-		// 	product_image: 'T',
-		// 	brand: 'Maytag',
-		// 	model: 'SeaBreeze', 
-		// }])
-		// console.log(result);
-
 	},
 	aboutRoute: function () {
-		console.log('about route working')
+		console.log('about route working');
 	},
 	searchRoute: function () {
-		console.log('compare route working')
+		console.log('compare route working');
+	},
+
+	defaultRoute: function () {
+		console.log('404');
 	}
 })
-	App.router = new App.Router;
 
-	Backbone.history.start();
+//instantiate the router
+App.router = new App.Router;
+
+// start backbone history a necessary step for bookmarkable URL's
+Backbone.history.start();

@@ -14,7 +14,8 @@ var changeCase = require('../../lib/change-case')
 
 
 
-// List all users
+// List all products
+// this assumes ":3000/api/[filename]"
 router.get('/', function(req, res) {
   //debug('GET' + req.path)
 

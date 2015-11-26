@@ -103,7 +103,6 @@ h2 {
 .tile-image {
   height: 100%;
   padding-top: 10px;
-  background: url(../images/hugger1000x500.jpg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 50% 10%; }
