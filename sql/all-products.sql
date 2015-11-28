@@ -9,9 +9,3 @@ FROM product
 JOIN brand USING (brand_id)
 JOIN file USING (product_id)
 WHERE product_type_id = 1
-
--- SELECT *
--- FROM product
--- JOIN brand USING (brand_id)
--- JOIN file USING (product_id)
--- WHERE product_type_id = 1

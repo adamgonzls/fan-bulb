@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="./vendor/normalize-css/normalize.css">
-	<link rel="stylesheet" href="./css/styles.css">
+	<link rel="stylesheet" href="/vendor/normalize-css/normalize.css">
+	<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="/css/styles.css">
 
 </head>
 <body>
@@ -13,24 +14,83 @@
 				<nav class="primary-nav">
 					<a href="/#/search">Search</a>
 					<a href="/#/about">About</a>
+					<a href="/compare.html">Compare</a>
 				</nav>
 				<div class="showcase">Some statement about my company...
-					<div class="banner">Brands we carry</div>
+					<div class="banner">
+						<div class="banner-text"><h2>Brands</h2></div>
+						<div class="logos"></div>						
+					</div>
 				</div>
 			</div>
 		</div>
+		<div class="user-selections">Selections:</div>
 		<div class="content">
-			<div class="user-selections">
-				Selections:
-			</div>
+			<!-- hbs -->
+			<section>
+				<div>High Charts Here</div>
+				<table class="compare-selections" border="1">
+					<tr>
+						<td>Brand</td>
+						<td>brand1</td>
+						<td>brand2</td>
+					</tr>
+					<tr>
+						<td>Model</td>
+						<td>model1</td>
+						<td>model2</td>
+					</tr>
+					<tr>
+						<td>price</td>
+						<td>$75</td>
+						<td>$225</td>
+					</tr>
+					<tr>
+						<td>Electric cost/Mo</td>
+						<td>$5</td>
+						<td>$3</td>
+					</tr>
+					<tr>
+						<td>Width (in.)</td>
+						<td>52</td>
+						<td>52</td>
+					</tr>
+					<tr>
+						<td>Airflow (CFM)</td>
+						<td>1800</td>
+						<td>3500</td>
+					</tr>
+					<tr>
+						<td>Thermostat</td>
+						<td>No</td>
+						<td>Yes</td>
+					</tr>
+					<tr>
+						<td>Remote</td>
+						<td>No</td>
+						<td>Yes</td>
+					</tr>
+					<tr>
+						<td>Lightbulb</td>
+						<td>17 Watt CFL</td>
+						<td>18 Watt LED</td>
+					</tr>
+				</table>
+			<!-- hbs -->
+
+
 			<section>
 				<h2>Ceiling fans</h2>
 				<div class="tiles"></div>
 			</section>
 			<section>
 				<h2>Light bulbs</h2>
-				<!-- <div class="tiles"> -->
-				<!-- </div> -->
+				<div class="tiles"></div>
+				<!-- <div class="tiles"></div> -->
+			</section>
+			<section>
+				<h2>Ceiling fans</h2>
+				<div class="tiles"></div>
 			</section>
 		</div>
 	</div>

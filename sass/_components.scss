@@ -1,13 +1,13 @@
 /****************************************
   Components
 *****************************************/
-
 .tile {
 	height: 300px;
 	margin: 5px;
 	border: 1px solid $med-grey;
 	position: relative;
 	box-shadow: 0 2px 2px $med-grey;
+
 	@include wider-than(600px) {
 		width: calc(33.33% - 10px);
 	}
@@ -16,7 +16,6 @@
 .tile-image {
 	height: 100%;
 	padding-top: 10px;
-	// background: url(../images/hugger1000x500.jpg); //should I make this an inline style in the hbs template?
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: 50% 10%;

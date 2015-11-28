@@ -5,22 +5,31 @@
 
 .content > section {
 	padding: 30px 40px;
+	border-bottom: 1px solid $med-grey;
 }
+
 
 .tiles {
 	display: flex;
 	flex-direction: column;
 	margin: auto;
-	// padding: 20px;
-	
-	//the following is desktop mode:...
 	@include wider-than(600px) {
 		display: flex;
 		flex-wrap: wrap;
 		flex-direction: row;
-		// transform: translateX(0);	
-		// left: 0;
-		// top: 0;
 	}
 
+}
+
+.compare-selections {
+	width: 80%;
+	margin: auto;
+}
+
+.compare-selections td {
+	padding: 2px;
+}
+
+tr:nth-child(odd) {
+	background-color: $lime-green;
 }

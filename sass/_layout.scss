@@ -74,19 +74,60 @@ h2 {
 
 .showcase {
 	height: 400px;
-	background: url(../images/hugger1000x500.jpg);
+	background: url(../images/fan_hugger1000x500.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: 50% 30%;
 	position: relative;
 }
 
-.banner {
+.showcase > h2 {
+	font-size: 2em;
 	position: absolute;
-	height: 40%;
-	background-color: rgba(250,250,250,.7);
-	border: 1px solid black;
+	bottom: 50%;
+}
+
+.banner {
+	display: flex;
+	padding: 25px;
+	position: absolute;
+	height: 35%;
+	background-color: rgba(250,250,250,.8);
 	bottom: 15%;
 	left: 0;
 	right: 0;
+}
+
+.banner-text {
+	font-size: 2em;
+	padding: 20px;
+	text-transform: uppercase;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.logos {
+	display: flex;
+	width: 100%;
+	// margin: 5px;
+
+}
+
+.logo {
+	
+	width: 15%;
+	margin: 0 20px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.specifications {
+	display: flex;
+	background-color: orange;
+}
+
+.specifications > div {
+	// flex: 1
 }
